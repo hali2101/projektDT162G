@@ -27,7 +27,8 @@ Skicka till:
     "temperature": "-4",
     "precipitation": "Snö 1 dm",
     "humidity": "92 %",
-    "wind": "Svag till måttlig"
+    "wind": "Svag till måttlig",
+    "locality": "Västanbyn"
 }
 ```
 Returneras:
@@ -40,6 +41,7 @@ Returneras:
     "temperature": "-4",
     "precipitation": "Snö 1 dm",
     "humidity": "92 %",
-    "wind": "Svag till måttlig"
+    "wind": "Svag till måttlig",
+    "locality": "Västanbyn"
 }
 ```
