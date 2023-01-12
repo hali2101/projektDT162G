@@ -1,6 +1,6 @@
 <!--HTML-innehållet i webbsidan-->
 <template>
-  <article class="w-50 text-center m-auto mb-5 border rounded p-4">
+  <article class="w-75 text-center m-auto mb-5 border rounded p-5">
     <h2>Välkommen!</h2>
     <p>
       Du har hittat helt rätt om du vill använda en enkel sida till att se och
@@ -33,19 +33,115 @@
       >
         <div class="accordion-body">
           <div>
-            <ul>
-              <li>Januari</li>
-              <li>Februari</li>
-              <li>Mars</li>
-              <li>April</li>
-              <li>Maj</li>
-              <li>Juni</li>
-              <li>Juli</li>
-              <li>Augusti</li>
-              <li>September</li>
-              <li>Oktober</li>
-              <li>November</li>
-              <li>December</li>
+            <ul class="text-center" style="list-style: none">
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('01')"
+                >
+                  Januari
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('02')"
+                >
+                  Februari
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('03')"
+                >
+                  Mars
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('04')"
+                >
+                  April
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('05')"
+                >
+                  Maj
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('06')"
+                >
+                  Juni
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('07')"
+                >
+                  Juli
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('08')"
+                >
+                  Augusti
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('09')"
+                >
+                  September
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('10')"
+                >
+                  Oktober
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('11')"
+                >
+                  November
+                </button>
+              </li>
+              <li class="p-1">
+                <button
+                  class="border border-none w-50"
+                  style="background-color: #e3f2fd"
+                  @click="paginationByMonth('12')"
+                >
+                  December
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -78,6 +174,7 @@ export default {
     //skapar reaktiv data
     return {
       notes: [],
+      notebymonth: "",
     };
   },
   methods: {
@@ -135,6 +232,25 @@ export default {
         //deklarerar att detta är en emit
         this.$emit("deleteNote");
       }
+    },
+    //filtrera resultatet av anteckningar efter månad
+    async paginationByMonth(month) {
+      //väntar in för att fetcha alla inför filtrering
+      await this.getAllNotes();
+      //deklarera tom array
+      let monthArr = [];
+      //foreach-loop för arrayen med anteckningar
+      this.notes.forEach((note) => {
+        //spara i variabel
+        this.notebymonth = note.notecreated.substring(5, 7);
+        //kontroll om månadsnummer stämmer med knappen medskickade sträng
+        if (month == this.notebymonth) {
+          //pushar in objekten i nya arrayen
+          monthArr.push(note);
+        }
+      });
+      //fyller notesarrayen med nya arrayen
+      this.notes = monthArr;
     },
   },
   mounted() {

@@ -90,7 +90,6 @@ export default {
   data() {
     return {
       editmode: false,
-      editborder: false,
     };
   },
   //deklarerar vilka props som tas emot
@@ -107,9 +106,6 @@ export default {
       });
       //visar knapp för editering
       this.editmode = true;
-
-      //sätter kant runt det som ska editeras
-      this.editborder = true;
     },
     //metod för att uppdatera anteckning
     async updateNote(id) {
