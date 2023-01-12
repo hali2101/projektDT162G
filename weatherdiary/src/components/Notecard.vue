@@ -24,25 +24,36 @@
           v-model="this.note.temperature"
         />
         <br />
-        <label for="temperature">Nederbörd:</label>
+        <label for="precipitation">Nederbörd:</label>
         <input
           class="card-text border border-white editable"
           type="text"
           v-model="this.note.precipitation"
+          id="precipitation"
         />
         <br />
-        <label for="temperature">Luftfuktighet:</label>
+        <label for="humidity">Luftfuktighet:</label>
         <input
           class="card-text border border-white editable"
           type="text"
           v-model="this.note.humidity"
+          id="humidity"
         />
         <br />
-        <label for="temperature">Vind:</label>
+        <label for="wind">Vind:</label>
         <input
           class="card-text border border-white editable"
           type="text"
           v-model="this.note.wind"
+          id="wind"
+        />
+        <br />
+        <label for="locality">Ort:</label>
+        <input
+          class="card-text border border-white editable"
+          type="text"
+          v-model="this.note.locality"
+          id="locality"
         />
         <br />
         <p class="m-2 text-primary" v-if="editmode">
@@ -109,7 +120,8 @@ export default {
         this.temperature != "" &&
         this.precipitation != "" &&
         this.humidity != "" &&
-        this.wind != ""
+        this.wind != "" &&
+        this.locality != ""
       ) {
         //spara innehållet som ett objekt för lagring i databasen
         let updatedBody = {
@@ -119,6 +131,7 @@ export default {
           precipitation: this.note.precipitation,
           humidity: this.note.humidity,
           wind: this.note.wind,
+          locality: this.note.locality,
         };
 
         //lagra svaret i en variabel

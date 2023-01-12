@@ -53,6 +53,15 @@
       <input v-model="wind" type="text" class="form-control" id="wind" />
     </div>
     <div class="col-lg-5 mt-3">
+      <label for="locality" class="form-label">Ort:</label>
+      <input
+        v-model="locality"
+        type="text"
+        class="form-control"
+        id="locality"
+      />
+    </div>
+    <div class="col-lg-5 mt-3">
       <button class="btn btn-success mt-5" type="submit">
         Lägg till notering
       </button>
@@ -81,6 +90,7 @@ export default {
       precipitation: "",
       humidity: "",
       wind: "",
+      locality: "",
       errormsg: false,
       sucessmsg: false,
       storemsg: false,
@@ -96,7 +106,8 @@ export default {
         this.temperature != "" &&
         this.precipitation != "" &&
         this.humidity != "" &&
-        this.wind != ""
+        this.wind != "" &&
+        this.locality != ""
       ) {
         //spara innehållet som ett objekt för lagring i databasen
         let noteBody = {
@@ -106,6 +117,7 @@ export default {
           precipitation: this.precipitation,
           humidity: this.humidity,
           wind: this.wind,
+          locality: this.locality,
         };
 
         //lagra svaret i en variabel
@@ -145,6 +157,7 @@ export default {
       this.precipitation = "";
       this.humidity = "";
       this.wind = "";
+      this.locality = "";
     },
   },
 };

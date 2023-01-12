@@ -1,5 +1,14 @@
 <!--HTML-innehållet i webbsidan-->
 <template>
+  <article class="w-50 text-center m-auto mb-5 border rounded p-4">
+    <h2>Välkommen!</h2>
+    <p>
+      Du har hittat helt rätt om du vill använda en enkel sida till att se och
+      logga vädernoteringar. Det finns möjlighet till att lägga till, ändra och
+      ta bort anteckningar.
+    </p>
+    <p>Mycket nöje!</p>
+  </article>
   <h2 class="text-center mb-5">Loggade vädernoteringar</h2>
   <!--filtrering av månad-->
   <div class="accordion w-50 mb-3" id="accordionExample">
@@ -97,6 +106,7 @@ export default {
         return false;
       }
     },
+    checkMonth() {},
     async deleteNote(id) {
       //kontroll för att säkerställa radering
       let result = confirm("Är du säker på att du vill radera anteckningen?");

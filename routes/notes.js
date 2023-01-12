@@ -35,6 +35,7 @@ db.once("open", function (callback) {
     precipitation: String,
     humidity: String,
     wind: String,
+    locality: String,
   });
 
   // Create schema model
@@ -73,6 +74,7 @@ db.once("open", function (callback) {
       precipitation: req.body.precipitation,
       humidity: req.body.humidity,
       wind: req.body.wind,
+      locality: req.body.locality,
     });
 
     console.log("test" + req.body.notename);
@@ -100,6 +102,7 @@ db.once("open", function (callback) {
       precipitation: req.body.precipitation,
       humidity: req.body.humidity,
       wind: req.body.wind,
+      locality: req.body.locality,
     };
 
     //Update note with specific id in db
