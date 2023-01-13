@@ -1,3 +1,5 @@
+<!--Utvecklad av Hanna Lindholm - hali2101@student.miun.se-->
+
 <!--HTML-innehållet i webbsidan-->
 <template>
   <h2 class="text-center mb-5">Lägg till ny vädernotering</h2>

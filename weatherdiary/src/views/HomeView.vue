@@ -1,3 +1,5 @@
+<!--Utvecklad av Hanna Lindholm - hali2101@student.miun.se-->
+
 <!--HTML-innehållet i webbsidan-->
 <template>
   <article class="w-75 text-center m-auto mb-5 border rounded p-5">
