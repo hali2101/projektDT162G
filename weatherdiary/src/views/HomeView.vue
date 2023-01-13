@@ -35,10 +35,10 @@
       >
         <div class="accordion-body">
           <div>
-            <ul class="text-center" style="list-style: none">
+            <ul style="list-style: none">
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('01')"
                 >
@@ -47,7 +47,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('02')"
                 >
@@ -56,7 +56,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('03')"
                 >
@@ -65,7 +65,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('04')"
                 >
@@ -74,7 +74,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('05')"
                 >
@@ -83,7 +83,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('06')"
                 >
@@ -92,7 +92,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('07')"
                 >
@@ -101,7 +101,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('08')"
                 >
@@ -110,7 +110,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('09')"
                 >
@@ -119,7 +119,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('10')"
                 >
@@ -128,7 +128,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('11')"
                 >
@@ -137,7 +137,7 @@
               </li>
               <li class="p-1">
                 <button
-                  class="border border-none w-50"
+                  class="border border-none"
                   style="background-color: #e3f2fd"
                   @click="paginationByMonth('12')"
                 >
@@ -262,4 +262,4 @@ export default {
 </script>
 
 <!--CSS-->
-<style scoped></style>
+<style></style>
